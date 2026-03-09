@@ -1,0 +1,40 @@
+import Graph from "../Graph";
+
+const DefaultGameMap = new Graph();
+
+DefaultGameMap.addNode("Blue Home", {canRecruit: true, income: 10});
+DefaultGameMap.addNode("Blue to Center", {canRecruit: false, income: 2});
+DefaultGameMap.addNode("B to G", {canRecruit: false, income: 2});
+DefaultGameMap.addNode("B to R", {canRecruit: false, income: 2});
+DefaultGameMap.addNode("Red Home", {canRecruit: true, income: 10});
+DefaultGameMap.addNode("Red to Center", {canRecruit: false, income: 2});
+DefaultGameMap.addNode("R to B", {canRecruit: false, income: 2});
+DefaultGameMap.addNode("R to G", {canRecruit: false, income: 2});
+DefaultGameMap.addNode("Green Home", {canRecruit: true, income: 10});
+DefaultGameMap.addNode("Green to Center", {canRecruit: false, income: 2});
+DefaultGameMap.addNode("G to R", {canRecruit: false, income: 2});
+DefaultGameMap.addNode("G to B", {canRecruit: false, income: 2});
+DefaultGameMap.addNode("Gate RB", {canRecruit: false, income: 4});
+DefaultGameMap.addNode("Gate GB", {canRecruit: false, income: 4});
+DefaultGameMap.addNode("Gate RG", {canRecruit: false, income: 4});
+DefaultGameMap.addNode("Center", {canRecruit: true, income: 8});
+DefaultGameMap.addEdge("Blue Home", "Blue to Center");
+DefaultGameMap.addEdge("Red Home", "Red to Center");
+DefaultGameMap.addEdge("Green Home", "Green to Center");
+DefaultGameMap.addEdge("Blue to Center", "Center");
+DefaultGameMap.addEdge("Red to Center", "Center");
+DefaultGameMap.addEdge("Green to Center", "Center");
+DefaultGameMap.addEdge("Blue Home", "B to R");
+DefaultGameMap.addEdge("B to R", "Gate RB");
+DefaultGameMap.addEdge("Blue Home", "B to G");
+DefaultGameMap.addEdge("B to G", "Gate GB");
+DefaultGameMap.addEdge("Red Home", "R to G");
+DefaultGameMap.addEdge("R to G", "Gate RG");
+DefaultGameMap.addEdge("Red Home", "R to B");
+DefaultGameMap.addEdge("R to B", "Gate RB");
+DefaultGameMap.addEdge("Green Home", "G to B");
+DefaultGameMap.addEdge("G to B", "Gate GB");
+DefaultGameMap.addEdge("Green Home", "G to R");
+DefaultGameMap.addEdge("G to R", "Gate RG");
+
+export default DefaultGameMap;

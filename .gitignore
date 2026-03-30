@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Training backups
+/public/model/
+
+# Training runtime files
+/training/log/
+/training/data/
+/training/model*
